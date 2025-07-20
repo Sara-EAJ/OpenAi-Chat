@@ -10,6 +10,10 @@ ARABIC_DATA_PATH = 'places_data.json'
 ENGLISH_DATA_PATH = 'Englishplaces_data.json'
 arabic_data, english_data = load_data(ARABIC_DATA_PATH, ENGLISH_DATA_PATH)
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Backend is working ✅"
+
 @app.route('/chat', methods=['POST'])
 def chat():
     try:
